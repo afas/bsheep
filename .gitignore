@@ -1,0 +1,15 @@
+.bundle
+db/*.sqlite3
+db/schema.rb
+log/*.log
+tmp/**/*
+public/welcome/*
+public/project/*
+public/top_level/*
+public/service/*
+public/post/*
+public/client/*
+public/team/*
+.idea/*
+Gemfile.lock
+.sass-cache/
