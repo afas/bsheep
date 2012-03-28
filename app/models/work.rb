@@ -9,7 +9,7 @@ class Work < ActiveRecord::Base
 
   before_save :generate_short_url
 
-  self.per_page = 8
+  self.per_page = 3
 
   #default_scope order("item_order, id DESC")
 

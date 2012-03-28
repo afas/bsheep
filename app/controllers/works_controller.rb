@@ -1,4 +1,16 @@
 class WorksController < ApplicationController
+
+  def page
+    @works = Work.where(:lang => I18n.locale).paginate(:page => params[:page])
+
+    render :layout => false
+
+    #respond_to do |format|
+    #  format.html # index.html.erb
+    #  format.json { render json: @works }
+    #end
+  end
+
   # GET /works
   # GET /works.json
   def index

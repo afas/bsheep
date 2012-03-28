@@ -5,6 +5,7 @@ Bsheep::Application.routes.draw do
   scope '/:locale', :locale => /en|ru/ do
 
     resources :works
+    match '/work/page/:page' => 'works#page', :as => :work_page
     match '/work/:short_url' => 'works#show', :as => :works_short
     resources :top_levels
     resources :welcomes

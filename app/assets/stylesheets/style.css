@@ -8,6 +8,7 @@
     position: absolute;
     top: 21px;
     right: 13px;
+    z-index:9999;
 }
 
 .description {
