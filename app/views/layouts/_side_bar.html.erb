@@ -1,0 +1,20 @@
+<div id="sidebar">
+  <%= controller.controller_name != "welcome" ? link_to(image_tag("logo.png", :alt => yield(:title)), "/", :title => @welcome.title, :class => "bs-logo") : image_tag("logo.png", :alt => yield(:title)) %>
+
+  <h1><%= @welcome.title %></h1>
+  <p><%= @welcome.description %></p>
+
+  <%= render "layouts/main_menu" %>
+
+  <h2><%= t('activerecord.attributes.welcome.contacts') %></h2>
+
+  <%= @welcome.phone %><br/>
+  <%= @welcome.email %><br/>
+  <%= @welcome.address %><br/>
+
+  <%= render 'layouts/map' %>
+
+  <%= render "service_partial/twitter_follow" %>
+  <%= render "service_partial/fb_like_box" %>
+
+</div>

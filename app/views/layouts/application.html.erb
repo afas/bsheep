@@ -1,14 +1,28 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Bsheep</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <title><%= yield(:title) %></title>
+
+  <meta name="description" content="<%= yield(:description) %>">
+  <meta name="keywords" content="<%= yield(:keywords) %>">
+
+  <%= stylesheet_link_tag "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
+  <%= aloha! if !@edit_action.nil? %>
+  <script type="text/javascript" src="http://vkontakte.ru/js/api/share.js?9" charset="windows-1251"></script>
+
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-<%= yield %>
+<%= render "layouts/side_bar" %>
+<%= render "layouts/lang_switch" %>
+
+<div class="true-content">
+  <%= yield %>
+</div>
+
+<%= yield :scripts %>
 
 </body>
 </html>

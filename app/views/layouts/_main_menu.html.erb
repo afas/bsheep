@@ -1,0 +1,7 @@
+<ul>
+  <% @top_level_list.each do |item| %>
+      <li <%= 'class="active"' if controller.controller_name != "welcome" && item == @top_level %>>
+        <%= link_to item.title, "/#{item.short_url}" %>
+      </li>
+  <% end %>
+</ul>

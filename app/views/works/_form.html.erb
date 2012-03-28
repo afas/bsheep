@@ -1,0 +1,63 @@
+<%= form_for(@work, :builder => StarsFormBuilder, :html => {:multipart => true}) do |f| %>
+    <% if @work.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@work.errors.count, "error") %> prohibited this work from being saved:</h2>
+
+          <ul>
+            <% @work.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+    <%= f.hidden_field :user_id, :value => 1 %>
+    <%#= f.hidden_field :short_url, :value => Digest::SHA2.hexdigest("#{Time.now}").first(8) %>
+
+    <div class="field">
+      <%= f.label :lang %>
+      <br/>
+      <%= f.collection_select(:lang, Language.collection, :cut, :name, :prompt => false) %>
+    </div>
+    <% if @work.preview_file_name? %>
+        <%= image_tag(@work.preview.url(:social_preview)) %>
+    <% end %>
+    <div class="field">
+      <%= f.label :preview %>
+      <br/>
+      <%= f.file_field :preview %>
+    </div>
+    <div class="field">
+      <%= f.label :title %>
+      <br/>
+      <%= f.text_field :title %>
+    </div>
+    <div class="field">
+      <%= f.label :description %>
+      <br/>
+      <%= f.text_area :description %>
+    </div>
+    <div class="field">
+      <%= f.label :full_text %>
+      <br/>
+      <%= f.text_area :full_text %>
+    </div>
+    <div class="field">
+      <%= f.label :with_web_page %>
+      <br/>
+      <%= f.check_box :with_web_page %>
+    </div>
+    <div class="field">
+      <%= f.label :web_url %>
+      <br/>
+      <%= f.text_field :web_url %>
+    </div>
+    <div class="field">
+      <%= f.label :tape_color %>
+      <br/>
+      <%= f.number_field :tape_color %>
+    </div>
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+<% end %>

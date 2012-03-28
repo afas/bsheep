@@ -1,4 +1,26 @@
 Bsheep::Application.routes.draw do
+
+  match '/language/:lang_cut' => 'welcomes#set_lang'
+
+  scope '/:locale', :locale => /en|ru/ do
+
+    resources :works
+    match '/work/:short_url' => 'works#show', :as => :works_short
+    resources :top_levels
+    resources :welcomes
+
+    devise_for :users
+
+    #match '/auth/sign_in' => 'authentications#login', :as => :sign_in
+    #match '/auth/sign_up' => 'authentications#registration', :as => :sign_up
+    #devise_for :units, :controllers => {:omniauth_callbacks => "omniauth_callbacks", :registrations => 'registrations'}
+
+  end
+
+  resources :seo_data
+
+  root :to => 'welcomes#index'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -48,7 +70,6 @@ Bsheep::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  # root :to => 'welcome#index'
 
   # See how all your routes lay out with "rake routes"
 

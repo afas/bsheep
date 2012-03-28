@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Lang:</b>
+  <%= @work.lang %>
+</p>
+
+<p>
+  <b>Title:</b>
+  <%= @work.title %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @work.description %>
+</p>
+
+<p>
+  <b>Full text:</b>
+  <%= @work.full_text %>
+</p>
+
+<p>
+  <b>With web page:</b>
+  <%= @work.with_web_page %>
+</p>
+
+<p>
+  <b>Web url:</b>
+  <%= @work.web_url %>
+</p>
+
+<p>
+  <b>Tape color:</b>
+  <%= @work.tape_color %>
+</p>
+
+<p>
+  <b>Short url:</b>
+  <%= @work.short_url %>
+</p>
+
+<%= link_to 'Edit', edit_work_path(@work) %> |
+<%= link_to 'Back', works_path %>

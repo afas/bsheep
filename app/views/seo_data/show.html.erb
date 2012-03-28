@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @seo_datum.title %>
+</p>
+
+<p>
+  <b>Keywords:</b>
+  <%= @seo_datum.keywords %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @seo_datum.description %>
+</p>
+
+
+<%= link_to 'Edit', edit_seo_datum_path(@seo_datum) %> |
+<%= link_to 'Back', seo_data_path %>

@@ -1,0 +1,29 @@
+ru:
+  title: "Black Sheep"
+  description: "Black Sheep - Делаем мир лучше инструментами нового времени"
+  keywords: "Black Sheep, развитие, социум, веб разработка, разработка мобильных приложений, Apple, Android, ruby on rails,  облачное хранилище, облачные технологии, видео стримминг, облачные сервисы, креатив, брендинг, развитие бренда, вирусное видео, вирусный маркетинг, СММ, реклама в социальных сетях, документооборот, сео оптимизация, peace love unity and respect community, plur, делаем мир лучше"
+
+  social_tools:
+    region: "ru_RU"
+    twitter:
+      follow: "Читать"
+      tweet: "Твитнуть"
+
+  activerecord:
+    capitalized_models:
+      welcome: "Общая информация (о команде)"
+      work: "Работа (проект)"
+      top_level: "Элемент главного меню"
+      service: "Услуга"
+      post: "Сообщение блога"
+      client: "Клиент (заказчик)"
+    models:
+      welcome: "общую информацию (о команде)"
+      work: "работу (проект)"
+      top_level: "элемент главного меню"
+      service: "услугу"
+      post: "сообщение блога"
+      client: "клиента (заказчика)"
+    attributes:
+      welcome:
+        contacts: "Контакты"

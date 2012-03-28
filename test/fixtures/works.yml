@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  lang: MyString
+  title: MyString
+  description: MyText
+  full_text: MyText
+  with_web_page: false
+  web_url: MyString
+  tape_color: 1
+  short_url: MyString
+
+two:
+  lang: MyString
+  title: MyString
+  description: MyText
+  full_text: MyText
+  with_web_page: false
+  web_url: MyString
+  tape_color: 1
+  short_url: MyString

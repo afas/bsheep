@@ -1,0 +1,21 @@
+.map_container {
+    width: 168px;
+    height: 168px;
+}
+
+.gmaps4rails_map {
+    width: 168px;
+    height: 168px;
+
+    -webkit-border-radius: 85px;
+    -moz-border-radius: 85px;
+    border-radius: 85px;
+
+    -webkit-box-shadow: rgba(64, 64, 64, 0.5) 0 2px 5px;
+    -moz-box-shadow: rgba(64, 64, 64, 0.5) 0 2px 5px;
+    box-shadow: rgba(64, 64, 64, 0.5) 0 2px 5px;
+}
+
+.gmnoprint {
+    display: none !important;
+}

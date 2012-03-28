@@ -1,0 +1,33 @@
+#sidebar {
+    width:208px;
+    padding-right: 34px;
+    float: left;
+}
+
+#lang {
+    position: absolute;
+    top: 21px;
+    right: 13px;
+}
+
+.description {
+    width: 380px;
+}
+
+.true-content {
+    margin-left: 260px;
+}
+
+.work-box {
+    padding-right: 21px;
+    /*margin: 0 auto;*/
+}
+
+.big-box {
+    /*width: 710px;*/
+
+}
+
+.medium-box {
+    /*width: 333px;*/
+}

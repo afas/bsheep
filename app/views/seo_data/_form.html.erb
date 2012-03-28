@@ -1,0 +1,29 @@
+<%= form_for(@seo_datum) do |f| %>
+  <% if @seo_datum.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@seo_datum.errors.count, "error") %> prohibited this seo_datum from being saved:</h2>
+
+      <ul>
+      <% @seo_datum.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :keywords %><br />
+    <%= f.text_field :keywords %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_area :description %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

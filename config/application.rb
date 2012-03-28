@@ -9,6 +9,9 @@ if defined?(Bundler)
   # Bundler.require(:default, :assets, Rails.env)
 end
 
+require File.expand_path('../../lib/web_page', __FILE__)
+require File.expand_path('../../lib/stars_form_builder', __FILE__)
+
 module Bsheep
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.
@@ -31,7 +34,7 @@ module Bsheep
 
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
-    # config.i18n.default_locale = :de
+    config.i18n.default_locale = :ru
 
     # Configure the default encoding used in templates for Ruby 1.9.
     config.encoding = "utf-8"

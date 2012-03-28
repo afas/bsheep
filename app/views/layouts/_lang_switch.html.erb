@@ -1,0 +1,7 @@
+<div id="lang">
+  <ul>
+    <% Language.collection.each do |lang| %>
+        <li><a href="/language/<%= lang.cut %>"><%= lang.name %></a></li>
+    <% end %>
+  </ul>
+</div>

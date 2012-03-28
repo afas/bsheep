@@ -1,5 +1,29 @@
-# Sample localization file for English. Add more files in this directory for other locales.
-# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
-
 en:
-  hello: "Hello world"
+  title: "Black Sheep"
+  description: "Black Sheep - Make the world a better"
+  keywords: "Black Sheep, evolution, progress, community, web development, ruby on rails, mobile platform development, Apple, Android, cloud computing, cloud storage, cloud services, media streaming, creative, branding, promotion, naming, SMM, seo optimization, viral marketing, viral video, peace love unity and respect community, plur, Make the world a better"
+
+  social_tools:
+    region: "en_US"
+    twitter:
+      follow: "Follow"
+      tweet: "Tweet"
+
+  activerecord:
+    capitalized_models:
+      welcome: "General Information (about)"
+      work: "Work (project)"
+      top_level: "Main menu item"
+      service: "Service"
+      post: "Post"
+      client: "The client (customer)"
+    models:
+      welcome: "general information (about)"
+      work: "work (project)"
+      top_level: "main menu item"
+      service: "service"
+      post: "post"
+      client: "the client (customer)"
+    attributes:
+      welcome:
+        contacts: "Contacts"

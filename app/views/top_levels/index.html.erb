@@ -1,0 +1,35 @@
+<h1>Listing top_levels</h1>
+
+<table>
+  <tr>
+    <th>Lang</th>
+    <th>Title</th>
+    <th>Description</th>
+    <th>Seo data</th>
+    <th>Order</th>
+    <th>User</th>
+    <th>Short url</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @top_levels.each do |top_level| %>
+  <tr>
+    <td><%= top_level.lang %></td>
+    <td><%= top_level.title %></td>
+    <td><%= top_level.description %></td>
+    <td><%= top_level.seo_data_id %></td>
+    <td><%= top_level.order %></td>
+    <td><%= top_level.user_id %></td>
+    <td><%= top_level.short_url %></td>
+    <td><%= link_to 'Show', top_level %></td>
+    <td><%= link_to 'Edit', edit_top_level_path(top_level) %></td>
+    <td><%= link_to 'Destroy', top_level, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Top level', new_top_level_path %>
