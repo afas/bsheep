@@ -4,6 +4,8 @@
 }
 
 .gmaps4rails_map {
+    z-index: 9999;
+
     width: 168px;
     height: 168px;
 

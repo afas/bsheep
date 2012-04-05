@@ -15,14 +15,14 @@ class Welcome < ActiveRecord::Base
 
   def gmaps4rails_marker_picture
     {
-        "picture" => "/favicon.png",
-        "width" => "20",
-        "height" => "20",
-        "marker_anchor" => [5, 10],
-        "shadow_picture" => "/favicon.png",
-        "shadow_width" => "110",
-        "shadow_height" => "110",
-        "shadow_anchor" => [5, 10],
+        "picture" => "assets/marker.png",
+        "width" => "24",
+        "height" => "31",
+        "marker_anchor" => [12, 23],
+        "shadow_picture" => "assets/shadow_marker.png",
+        "shadow_width" => "25",
+        "shadow_height" => "24",
+        "shadow_anchor" => [2, 16]
     }
   end
 
