@@ -15,7 +15,7 @@ class User < ActiveRecord::Base
                     :default_url => '/user/avatar/default.png',
                     :url => '/user/avatar/:id/:style_:basename.:extension'
 
-  validates_attachment_content_type :avatar, :content_type => ['image/jpeg', 'image/png'], :message => "Неверный формат файла изображения."
+  validates_attachment_content_type :avatar, :content_type => ['image/jpeg', 'image/png'], :message => I18n.t("paperclip.bad_file_format")
 
   def admin?
 

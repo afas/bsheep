@@ -1,10 +1,10 @@
-<%= form_for(@work, :builder => StarsFormBuilder, :html => {:multipart => true}) do |f| %>
-    <% if @work.errors.any? %>
+<%= form_for(@post, :builder => StarsFormBuilder, :html => {:multipart => true}) do |f| %>
+    <% if @post.errors.any? %>
         <div id="error_explanation">
-          <h2><%= pluralize(@work.errors.count, "error") %> prohibited this work from being saved:</h2>
+          <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
 
           <ul>
-            <% @work.errors.full_messages.each do |msg| %>
+            <% @post.errors.full_messages.each do |msg| %>
                 <li><%= msg %></li>
             <% end %>
           </ul>
@@ -16,10 +16,10 @@
     <div class="field">
       <%= f.label :lang %>
       <br/>
-      <%= f.collection_select(:lang, Language.collection, :cut, :name, :prompt => false) %>
+      <%= f.collection_select(:lang, Language.collection, :cut, :name, :value => I18n.locale, :prompt => false) %>
     </div>
-    <% if @work.preview_file_name? %>
-        <%= image_tag(@work.preview.url(:social_preview)) %>
+    <% if @post.preview_file_name? %>
+        <%= image_tag(@post.preview.url(:social_preview)) %>
     <% end %>
     <div class="field">
       <%= f.label :preview %>
@@ -41,21 +41,23 @@
       <br/>
       <%= f.text_area :full_text %>
     </div>
+
+    <% if @post.sign_board_image_file_name? %>
+        <%= image_tag(@post.sign_board_image.url(:preview)) %>
+    <% end %>
     <div class="field">
-      <%= f.label :with_web_page %>
+      <%= f.label :sign_board_image %>
       <br/>
-      <%= f.check_box :with_web_page %>
+      <%= f.file_field :sign_board_image %>
     </div>
     <div class="field">
-      <%= f.label :web_url %>
+      <%= f.label :sign_board_text %>
       <br/>
-      <%= f.text_field :web_url %>
+      <%= f.text_area :sign_board_text %>
     </div>
-    <div class="field">
-      <%= f.label :tape_color %>
-      <br/>
-      <%= f.collection_select(:tape_color, TapeColor.collection, :cut, :name, :prompt => true) %>
-    </div>
+
+    <!--sign_board_image-->
+
     <div class="actions">
       <%= f.submit %>
     </div>

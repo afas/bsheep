@@ -1,10 +1,10 @@
-<%= form_for(@work, :builder => StarsFormBuilder, :html => {:multipart => true}) do |f| %>
-    <% if @work.errors.any? %>
+<%= form_for(@service, :builder => StarsFormBuilder, :html => {:multipart => true}) do |f| %>
+    <% if @service.errors.any? %>
         <div id="error_explanation">
-          <h2><%= pluralize(@work.errors.count, "error") %> prohibited this work from being saved:</h2>
+          <h2><%= pluralize(@service.errors.count, "error") %> prohibited this service from being saved:</h2>
 
           <ul>
-            <% @work.errors.full_messages.each do |msg| %>
+            <% @service.errors.full_messages.each do |msg| %>
                 <li><%= msg %></li>
             <% end %>
           </ul>
@@ -18,14 +18,6 @@
       <br/>
       <%= f.collection_select(:lang, Language.collection, :cut, :name, :prompt => false) %>
     </div>
-    <% if @work.preview_file_name? %>
-        <%= image_tag(@work.preview.url(:social_preview)) %>
-    <% end %>
-    <div class="field">
-      <%= f.label :preview %>
-      <br/>
-      <%= f.file_field :preview %>
-    </div>
     <div class="field">
       <%= f.label :title %>
       <br/>
@@ -37,24 +29,24 @@
       <%= f.text_area :description %>
     </div>
     <div class="field">
-      <%= f.label :full_text %>
+      <%= f.label :seo_data_id %>
       <br/>
-      <%= f.text_area :full_text %>
+      <%= f.number_field :seo_data_id %>
     </div>
     <div class="field">
-      <%= f.label :with_web_page %>
+      <%= f.label :item_order %>
       <br/>
-      <%= f.check_box :with_web_page %>
+      <%= f.number_field :item_order %>
     </div>
     <div class="field">
-      <%= f.label :web_url %>
+      <%= f.label :user_id %>
       <br/>
-      <%= f.text_field :web_url %>
+      <%= f.number_field :user_id %>
     </div>
     <div class="field">
-      <%= f.label :tape_color %>
+      <%= f.label :short_url %>
       <br/>
-      <%= f.collection_select(:tape_color, TapeColor.collection, :cut, :name, :prompt => true) %>
+      <%= f.text_field :short_url %>
     </div>
     <div class="actions">
       <%= f.submit %>

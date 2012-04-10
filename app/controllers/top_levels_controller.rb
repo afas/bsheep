@@ -13,7 +13,12 @@ class TopLevelsController < ApplicationController
   # GET /top_levels/1
   # GET /top_levels/1.json
   def show
-    @top_level = TopLevel.find(params[:id])
+
+    if params[:short_url].nil?
+      @top_level = TopLevel.find(params[:id])
+    else
+      @top_level = TopLevel.find_by_short_url(params[:short_url])
+    end
 
     respond_to do |format|
       format.html # show.html.erb

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= yield(:title) %></title>
+
+  <meta name="description" content="<%= yield(:description) %>">
+  <meta name="keywords" content="<%= yield(:keywords) %>">
+
+  <%= stylesheet_link_tag "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= aloha! if !@edit_action.nil? %>
+  <script type="text/javascript" src="http://vkontakte.ru/js/api/share.js?9" charset="windows-1251"></script>
+
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<iframe id="work-site" src="<%= @work.web_url %>" frameborder="0" scrolling=no></iframe>
+
+<%= render "layouts/side_bar" %>
+<%= render "layouts/lang_switch" %>
+
+<%= yield %>
+
+<%= yield :scripts %>
+
+<script type="text/javascript">
+
+    $("#work-site").load(function () {
+        iFrameSetDimentions();
+    });
+
+
+    $(function () {
+        $(window).resize(function () {
+            iFrameSetDimentions();
+        });
+    });
+
+    function iFrameSetDimentions() {
+        iFrameWidth = $(window).width();
+        iFrameHeight = 2000;
+
+//        alert(iFrameHeight);
+
+        $("#work-site").css("width", iFrameWidth);
+        $("#work-site").css("height", iFrameHeight);
+    }
+</script>
+
+</body>
+</html>

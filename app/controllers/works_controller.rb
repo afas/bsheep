@@ -29,7 +29,7 @@ class WorksController < ApplicationController
     @work = Work.find_by_short_url(params[:short_url]) if params[:short_url]
 
     respond_to do |format|
-      format.html # show.html.erb
+      format.html { render layout: "promo_page" if @work.with_web_page }
       format.json { render json: @work }
     end
   end

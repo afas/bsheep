@@ -9,6 +9,9 @@ en:
       follow: "Follow"
       tweet: "Tweet"
 
+  paperclip:
+    bad_file_format: "Bad file format."
+
   activerecord:
     capitalized_models:
       welcome: "General Information (about)"

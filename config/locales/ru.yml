@@ -9,6 +9,9 @@ ru:
       follow: "Читать"
       tweet: "Твитнуть"
 
+  paperclip:
+    bad_file_format: "Неверный формат файла."
+
   activerecord:
     capitalized_models:
       welcome: "Общая информация (о команде)"

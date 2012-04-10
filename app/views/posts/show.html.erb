@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Lang:</b>
+  <%= @post.lang %>
+</p>
+
+<p>
+  <b>Title:</b>
+  <%= @post.title %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @post.description %>
+</p>
+
+<p>
+  <b>Full text:</b>
+  <%= @post.full_text %>
+</p>
+
+<p>
+  <b>Sign board text:</b>
+  <%= @post.sign_board_text %>
+</p>
+
+<p>
+  <b>Seo data:</b>
+  <%= @post.seo_data_id %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @post.user_id %>
+</p>
+
+<p>
+  <b>Short url:</b>
+  <%= @post.short_url %>
+</p>
+
+
+<%= link_to 'Edit', edit_post_path(@post) %> |
+<%= link_to 'Back', posts_path %>

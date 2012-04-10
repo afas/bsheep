@@ -1,13 +1,22 @@
 Bsheep::Application.routes.draw do
 
+
   match '/language/:lang_cut' => 'welcomes#set_lang'
 
   scope '/:locale', :locale => /en|ru/ do
 
-    resources :works
-    match '/work/page/:page' => 'works#page', :as => :work_page
-    match '/work/:short_url' => 'works#show', :as => :works_short
+    match '/blog' => 'posts#index'
+    match '/blog/:short_url' => 'posts#show', :as => :post_short
+    resources :posts
+
+    resources :services
+
+    match '/:short_url' => 'top_levels#show', :as => :top_level_short
     resources :top_levels
+
+    match '/work/page/:page' => 'works#page', :as => :work_page
+    match '/work/:short_url' => 'works#show', :as => :work_short
+    resources :works
     resources :welcomes
 
     devise_for :users

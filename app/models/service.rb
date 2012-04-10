@@ -1,6 +1,4 @@
-#encoding:utf-8
-class Work < ActiveRecord::Base
-
+class Service < ActiveRecord::Base
   belongs_to :author, :class_name => 'User'
   belongs_to :seo_data
 
@@ -9,8 +7,6 @@ class Work < ActiveRecord::Base
 
   before_save :generate_short_url
 
-  self.per_page = 5
-
   default_scope order("item_order, id DESC")
 
   has_attached_file :preview,
@@ -18,10 +14,9 @@ class Work < ActiveRecord::Base
                         :social_preview => '121x121#',
                         :medium => '333x400>',
                         :big => '800x700>'
-                        #:big => '710x330>'
                     },
-                    :default_url => '/work/default.png',
-                    :url => '/work/:id/:style_:basename.:extension'
+                    :default_url => '/service/default.png',
+                    :url => '/service/:id/:style_:basename.:extension'
 
   #validates_attachment_presence :preview
   validates_attachment_content_type :preview, :content_type => ['image/jpeg', 'image/png'], :message => I18n.t("paperclip.bad_file_format")
@@ -31,4 +26,5 @@ class Work < ActiveRecord::Base
   def generate_short_url
     self.short_url = Russian.transliterate(self.title.gsub(' ', '-')) if self.short_url.nil? && !self.title.nil?
   end
+
 end

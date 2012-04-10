@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Lang:</b>
+  <%= @service.lang %>
+</p>
+
+<p>
+  <b>Title:</b>
+  <%= @service.title %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @service.description %>
+</p>
+
+<p>
+  <b>Seo data:</b>
+  <%= @service.seo_data_id %>
+</p>
+
+<p>
+  <b>Item order:</b>
+  <%= @service.item_order %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @service.user_id %>
+</p>
+
+<p>
+  <b>Short url:</b>
+  <%= @service.short_url %>
+</p>
+
+
+<%= link_to 'Edit', edit_service_path(@service) %> |
+<%= link_to 'Back', services_path %>
