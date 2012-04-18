@@ -9,9 +9,6 @@ if defined?(Bundler)
   # Bundler.require(:default, :assets, Rails.env)
 end
 
-require File.expand_path('../../lib/web_page', __FILE__)
-require File.expand_path('../../lib/stars_form_builder', __FILE__)
-
 module Bsheep
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.
