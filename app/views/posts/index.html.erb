@@ -1,37 +1,19 @@
-<h1>Listing posts</h1>
-
-<table>
-  <tr>
-    <th>Lang</th>
-    <th>Title</th>
-    <th>Description</th>
-    <th>Full text</th>
-    <th>Sign board text</th>
-    <th>Seo data</th>
-    <th>User</th>
-    <th>Short url</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @posts.each do |post| %>
-  <tr>
-    <td><%= post.lang %></td>
-    <td><%= post.title %></td>
-    <td><%= post.description %></td>
-    <td><%= post.full_text %></td>
-    <td><%= post.sign_board_text %></td>
-    <td><%= post.seo_data_id %></td>
-    <td><%= post.user_id %></td>
-    <td><%= post.short_url %></td>
-    <td><%= link_to 'Show', post %></td>
-    <td><%= link_to 'Edit', edit_post_path(post) %></td>
-    <td><%= link_to 'Destroy', post, confirm: 'Are you sure?', method: :delete %></td>
-  </tr>
-<% end %>
-</table>
-
-<br />
-
 <%= link_to 'New Post', new_post_path %>
+<% @posts.each do |post| %>
+    <h2><%= post.title %> <%= link_to 'Edit', edit_post_path(post) %> | <%= link_to 'Destroy', post, confirm: 'Are you sure?', method: :delete %></h2>
+
+    <% if post.preview_file_name? %>
+        <%= image_tag(post.preview.url(:big)) %>
+    <% end %>
+    <div class="post-description"><%= post.description %></div>
+
+    <br/>
+
+    <div class="post-content"><%= post.full_text %></div>
+    <div class="sign-board">
+      <% if post.sign_board_image_file_name? %>
+          <%= image_tag(post.sign_board_image.url(:preview)) %>
+      <% end %>
+      <%= post.sign_board_text %>
+    </div>
+<% end %>

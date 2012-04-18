@@ -1,40 +1,9 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Lang:</b>
-  <%= @top_level.lang %>
-</p>
+<h1><%= @top_level.title %></h1>
 
 <p>
-  <b>Title:</b>
-  <%= @top_level.title %>
-</p>
-
-<p>
-  <b>Description:</b>
   <%= @top_level.description %>
 </p>
 
-<p>
-  <b>Seo data:</b>
-  <%= @top_level.seo_data_id %>
-</p>
-
-<p>
-  <b>Order:</b>
-  <%= @top_level.item_order %>
-</p>
-
-<p>
-  <b>User:</b>
-  <%= @top_level.user_id %>
-</p>
-
-<p>
-  <b>Short url:</b>
-  <%= @top_level.short_url %>
-</p>
-
-
-<%= link_to 'Edit', edit_top_level_path(@top_level) %> |
-<%= link_to 'Back', top_levels_path %>
+<%= link_to 'Edit', edit_top_level_path(@top_level) %> | <%= link_to 'Back', top_levels_path %>

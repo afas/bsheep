@@ -21,7 +21,7 @@ class Post < ActiveRecord::Base
                     :url => '/post/:id/:style_:basename.:extension'
 
   #validates_attachment_presence :preview
-  validates_attachment_content_type :preview, :content_type => ['image/jpeg', 'image/png'], :message => I18n.t("paperclip.bad_file_format")
+  #validates_attachment_content_type :preview, :content_type => ['image/jpeg', 'image/png'], :message => I18n.t("paperclip.bad_file_format")
 
   has_attached_file :sign_board_image,
                     :styles => {
@@ -31,7 +31,7 @@ class Post < ActiveRecord::Base
                     :url => '/post/:id/:style_:basename.:extension'
 
   #validates_attachment_presence :preview
-  validates_attachment_content_type :preview, :content_type => ['image/jpeg', 'image/png'], :message => I18n.t("paperclip.bad_file_format")
+  #validates_attachment_content_type :preview, :content_type => ['image/jpeg', 'image/png'], :message => I18n.t("paperclip.bad_file_format")
 
   private
 
