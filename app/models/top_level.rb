@@ -1,6 +1,6 @@
 #encoding:utf-8
 class TopLevel < ActiveRecord::Base
-  include_web_page
+  #include_web_page
 
   default_scope order("item_order")
 
