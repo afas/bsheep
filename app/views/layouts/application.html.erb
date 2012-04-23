@@ -13,12 +13,12 @@
 
   <%= csrf_meta_tags %>
 </head>
+
 <body>
 
 <%= render "layouts/side_bar" %>
-<%= render "layouts/lang_switch" %>
-
-<div class="true-content">
+<div class="container">
+  <%#= render "layouts/lang_switch" %>
   <%= yield %>
 </div>
 

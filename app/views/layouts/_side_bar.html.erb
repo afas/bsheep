@@ -1,20 +1,41 @@
 <div id="sidebar" <%= "style = 'background-color: #{TapeColor.by_id(@work.tape_color)};'" if !@work.nil? %>>
-  <%= controller.controller_name != "welcomes" ? link_to(image_tag("logo.png", :alt => yield(:title)), "/", :title => @welcome.title, :class => "bs-logo") : image_tag("logo.png", :alt => yield(:title), :class => "bs-logo") %>
+  <%= link_to(image_tag("logo.png",
+                        :alt => yield(:title)),
+              controller.controller_name != "welcomes" ? "/" : "#",
+              :title => @welcome.title,
+              :class => "logo")
+  %>
 
-  <h2><%= @welcome.title %></h2>
-  <p><%= @welcome.description %></p>
+  <header>
+    <h1><%= @welcome.title %></h1>
+    <p class="description">
+      <%= @welcome.description %>
+    </p>
+  </header>
 
-  <%= render "layouts/main_menu" %>
+  <nav class="main-menu">
+    <%= render "layouts/main_menu" %>
+  </nav>
 
-  <p><%= t('activerecord.attributes.welcome.contacts') %></p>
+  <h2><%= t('activerecord.attributes.welcome.contacts') %></h2>
+  <p class="contacts">
+    <%= @welcome.phone %>
+    <br/>
+    <%= @welcome.email %>
+  </p>
 
-  <%= @welcome.phone %><br/>
-  <%= @welcome.email %><br/>
-  <%= @welcome.address %><br/>
+  <address>
+    <%= @welcome.address %>
+  </address>
 
   <%= render 'layouts/map' %>
 
-  <%= render "service_partial/twitter_follow" %>
-  <%= render "service_partial/fb_like_box" %>
+  <div class="twitter-follow">
+    <%= render "service_partial/twitter_follow" %>
+  </div>
+
+  <div class="fb-like-box">
+    <%= render "service_partial/fb_like_box" %>
+  </div>
 
 </div>

@@ -13,20 +13,24 @@
 
   <%= csrf_meta_tags %>
 </head>
+
 <body>
 
-<iframe id="work-site" src="<%= @work.web_url %>" frameborder="0" scrolling=no></iframe>
+<iframe id="remote-site" src="<%= @work.web_url %>" frameborder="0" scrolling=no></iframe>
 
 <%= render "layouts/side_bar" %>
-<%= render "layouts/lang_switch" %>
 
-<%= yield %>
+<div class="container">
+  <%= render "layouts/lang_switch" %>
+  <%= yield %>
+</div>
+
 
 <%= yield :scripts %>
 
 <script type="text/javascript">
 
-    $("#work-site").load(function () {
+    $("#remote-site").load(function () {
         iFrameSetDimentions();
     });
 
@@ -41,10 +45,8 @@
         iFrameWidth = $(window).width();
         iFrameHeight = 2000;
 
-//        alert(iFrameHeight);
-
-        $("#work-site").css("width", iFrameWidth);
-        $("#work-site").css("height", iFrameHeight);
+        $("#remote-site").css("width", iFrameWidth);
+        $("#remote-site").css("height", iFrameHeight);
     }
 </script>
 
