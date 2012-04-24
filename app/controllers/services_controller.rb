@@ -4,6 +4,9 @@ class ServicesController < ApplicationController
   def index
     @services = Service.all
 
+    short_url = I18n.locale == :en ? "Services" : "services"
+    @top_level = TopLevel.find_by_lang_and_short_url(I18n.locale, short_url)
+
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @services }

@@ -1,13 +1,14 @@
 <div id="sidebar" <%= "style = 'background-color: #{TapeColor.by_id(@work.tape_color)};'" if !@work.nil? %>>
-  <%= link_to(image_tag("logo.png",
-                        :alt => yield(:title)),
+  <%= link_to(yield(:title),
               controller.controller_name != "welcomes" ? "/" : "#",
               :title => @welcome.title,
               :class => "logo")
   %>
 
+  <hr>
   <header>
     <h1><%= @welcome.title %></h1>
+
     <p class="description">
       <%= @welcome.description %>
     </p>
@@ -18,6 +19,7 @@
   </nav>
 
   <h2><%= t('activerecord.attributes.welcome.contacts') %></h2>
+
   <p class="contacts">
     <%= @welcome.phone %>
     <br/>
