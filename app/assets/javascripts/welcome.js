@@ -3,3 +3,6 @@
 
 //= require jquery
 //= require jquery_ujs
+
+//= require jquery.masonry.min
+//= require jquery.infinitescroll.min

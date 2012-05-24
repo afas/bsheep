@@ -1,0 +1,79 @@
+﻿/*=================================================================================================
+	reset styles
+=================================================================================================*/
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, em, img, strong, sub, sup, b, u, i,  dl, dt, dd, ol, ul, li, fieldset, form, label, table, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	vertical-align: baseline;
+	background: transparent;
+	font-size: 100%;
+}
+a {
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+table {
+	border-collapse: collapse; 
+	border-spacing: 0;
+}
+td, td img {
+	vertical-align: top;
+} 
+input, select, button, textarea {
+	margin: 0;
+	font-size: 100%;
+}
+input[type="text"], input[type="password"], textarea {
+	padding: 0;
+}
+input[type="checkbox"] {
+	vertical-align: bottom;
+}
+input[type="radio"] {
+	vertical-align: text-bottom;
+}
+sub {
+	vertical-align: sub;
+	font-size: smaller;
+}
+sup {
+	vertical-align: super;
+	font-size: smaller;
+}
+
+/*=================================================================================================
+	also styles
+=================================================================================================*/
+html {
+	overflow-y: scroll;
+}
+body {
+	font: normal 100.01% Arial, "Helvetica CY", "Nimbus Sans L", sans-serif;
+	line-height: 100%;
+	text-align: left;
+	color: #000;
+	background: #fff;
+}
+input, select, button, textarea {
+	font-family: Arial, "Helvetica CY", "Nimbus Sans L", sans-serif;
+}
+label, input[type="button"], input[type="submit"], button {
+	cursor: pointer;
+}
+a, a:visited {
+	color: #287fc3;
+	text-decoration: underline;
+}
+a:hover {
+	color: #287fc3;
+	text-decoration: none;
+}
+a:focus, a:active {
+	color: #287fc3;
+	text-decoration: underline;
+}

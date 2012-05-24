@@ -1,5 +1,12 @@
 <%= gmaps({
-                  "map_options" => {"auto_zoom" => false, "zoom" => 13, :language => I18n.locale, :sensor => false },
-                  "markers" => {"data" => @map}
+                  :map_options => {
+                          :auto_zoom => false,
+                          :zoom => 13,
+                          :language => I18n.locale,
+                          :sensor => false
+                  },
+                  :markers => {
+                          :data => @map
+                  }
           })
 %>

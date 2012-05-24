@@ -1,4 +1,4 @@
-<ul>
+<ul id="menu">
   <% @top_level_list.each do |item| %>
       <li <%= "class='active'" if controller.controller_name != "welcome" && item == @top_level %>>
         <%= link_to item.title, top_level_short_path(item.short_url) %>

@@ -1,206 +1,211 @@
-html {
-    width: auto;
-}
-
-body {
-    background: none repeat scroll 0 0 #FFFFFF;
-    color: #000000;
-    font-family: Helvetica, Arial, sans-serif;
-    font-size: 14px;
-    line-height: 16px;
-    margin: 0;
-    padding: 0;
-}
-
-/* side bar area */
-#sidebar {
-    background: none repeat scroll 0 0 #FFFFFF;
-    border-left: 1px solid #7B7B7B;
-    border-right: 1px solid #7B7B7B;
-    font-family: "Helvetica CY", "Nimbus Sans L", sans-serif;
-    left: 55px;
-    margin: 0 20px;
-    padding: 34px 20px;
-    position: absolute;
-    top: 0;
-    width: 170px;
-}
-
-.logo {
-    text-decoration: none;
-    display: block;
-    background: url("logo.png") no-repeat scroll 21px 0 transparent;
-    width: 170px;
-    height: 121px;
-}
-
-#sidebar hr {
-    background: url("header-top.png") repeat-x scroll 0 0 transparent;
-    border: medium none;
-    height: 4px;
-}
-
-header {
-    /*border-top: url(header-top.png);*/
-    border-bottom: #000000 solid 1px;
-}
-
-header h1 {
-    font-size: 16px;
-    line-height: normal;
-    color: #767676;
-}
-
-header p.description {
-    font-size: 12px;
-    line-height: 1.5em;
-    color: #232323;
-}
-
-.main-menu {
-}
-
-.main-menu ul, .main-menu li {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-.main-menu li {
-    /*height: 41px;*/
-    border-bottom: #e9e9e9 solid 1px;
-}
-
-.main-menu li a {
-    font-size: 16px;
-    line-height: 41px;
-    color: #232323;
-    text-decoration: none;
-}
-
-.main-menu li a:hover {
-    font-size: 16px;
-    line-height: 41px;
-    color: #232323;
-    text-decoration: none;
-}
-
-.main-menu li.active {
-    background: url("item-active.png") no-repeat scroll right center transparent;
-}
-
-#sidebar h2 {
-    font-size: 18px;
-    /*line-height: 41px;*/
-    color: #232323;
-    /*text-decoration: none;*/
-}
-
-#sidebar p.contacts {
-    font-size: 16px;
-    /*line-height: 41px;*/
-    color: #7b7b7b;
-    text-decoration: none;
-}
-
-#sidebar address {
-    font-size: 12px;
-    /*line-height: 41px;*/
-    color: #232323;
+@font-face {
+    font-family: 'Helvetica-Roman';
+    src: url('HelveticaLTCYR-Roman.eot');
+    src: url('HelveticaLTCYR-Roman.eot?#iefix') format('embedded-opentype'), url('HelveticaLTCYR-Roman.woff') format('woff'), url('HelveticaLTCYR-Roman.ttf') format('truetype'), url('HelveticaLTCYR-Roman.svg#Helvetica-Roman') format('svg');
+    font-weight: normal;
     font-style: normal;
 }
 
-.map_container {
-    margin: 21px 0 55px 0;
+@font-face {
+    font-family: 'Helvetica-Bold';
+    src: url('HelveticaLTCYR-Bold.eot');
+    src: url('HelveticaLTCYR-Bold.eot?#iefix') format('embedded-opentype'), url('HelveticaLTCYR-Bold.woff') format('woff'), url('HelveticaLTCYR-Bold.ttf') format('truetype'), url('HelveticaLTCYR-Bold.svg#Helvetica-Bold') format('svg');
+    font-weight: normal;
+    font-style: normal;
 }
 
-.twitter-follow {
-    margin: 0 0 21px 0;
+html {
+    height: 100%;
 }
 
-/* main content area */
-.container {
-    font-family: "Times New Roman", "Times CY", "Nimbus Roman No9 L", serif;
-    /*margin-left: 320px;*/
-    /*padding-top: 34px;*/
-    left: 320px;
-    top: 34px;
-    position: absolute;
-    z-index: 1;
-    min-width: 830px;
-    width: 70%;
-}
-
-/* lang switcher */
-#lang {
-    font-family: "Helvetica CY","Nimbus Sans L",sans-serif;
-    position: absolute;
-    right: 0;
-    top: 0;
-    z-index: 9999;
-}
-
-#lang ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-#lang ul li{
+body {
+    min-width: 1024px;
+    min-height: 1800px;
     margin: 0;
     padding: 0;
 }
 
-#remote-site {
-    /*width: 100%;*/
-    /*height: 100%;*/
+img {
+    display: block;
 }
 
-.control-panel {
-    position: absolute;
-    top: 121px;
-    right: 55px;
-    z-index: 9999;
-    background-color: #fff;
-    padding: 21px;
+/*=================================================================================================
+	#sidebar styles
+=================================================================================================*/
+#sidebar {
+    float: left;
+    width: 168px;
+    min-height: 1800px;
+    padding: 21px 41px;
+    margin: 0;
+    background: #FFFFFF url("bg_sidebar.jpg") 0 0 no-repeat;
+}
+
+#logo {
+    background: url("logo.png") no-repeat scroll center center transparent;
+    display: block;
+    height: 107px;
+    margin: 0 0 21px;
+    text-decoration: none;
+    width: 160px;
+}
+
+#sidebar header {
+    padding: 18px 0 16px;
+    font: normal 12px/17px 'Helvetica-Roman';
+    color: #232323;
+}
+
+#sidebar h1 {
+    padding: 0 0 12px;
+    margin: 0;
+    font: normal 16px/21px 'Helvetica-Roman';
+    color: #7B7B7B;
+}
+
+#sidebar h2 {
+    font: normal 18px/21px Georgia, "Century Schoolbook L", serif;
+    padding: 17px 0 6px;
+}
+
+#sidebar address {
+    padding: 2px 0;
+    font: normal 12px/17px 'Helvetica-Roman';
+    color: #232323;
+}
+
+#sidebar address .contacts {
+    padding: 0 0 15px;
+    font: normal 16px/22px 'Helvetica-Roman';
+    color: #7B7B7B;
+}
+
+#sidebar address a {
+    color: #7B7B7B;
+}
+
+#menu {
+    list-style: none outside none;
+}
+
+#menu li {
+    padding: 13px 7px 11px 1px;
+    border-bottom: solid 1px #e9e9e9;
+    font: normal 16px/17px 'Helvetica-Roman';
+    color: #232323;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+}
+
+#menu li.active {
+    background: transparent url("menu_item_hover.png") center right no-repeat;
+}
+
+#menu a {
+    color: #232323;
+    text-decoration: none;
+}
+
+.plugin {
+    margin: 21px 0;
+}
+
+/*=================================================================================================
+	.container styles
+=================================================================================================*/
+
+#main {
+    padding: 21px 0;
+    margin: 0 0 0 250px;
+    position: relative;
+}
+
+#works {
+    overflow: hidden;
+    zoom: 1;
+}
+
+#works > div {
+    float: left; /* ??? */
+    padding: 1px;
+    margin: 0 21px 21px 0;
+    border: dotted 1px Lime;
+}
+
+#works > div.big-box {
+}
+
+#works > div.medium-box {
+    width: 380px;
+    height: 380px;
+}
+
+#works > div dt {
+    padding: 10px 0;
+    font: normal 25px/29px Georgia, "Century Schoolbook L", serif;
+    color: #232323;
+}
+
+#works > div dd {
+    font: normal 12px/17px 'Helvetica-Roman';
+    color: #404040;
+}
+
+.gmnoprint {
+    display: none;
 }
 
 .work-box {
-    padding-right: 21px;
+    padding-bottom:55px;
 }
 
 .big-box {
+    width:790px;
 }
 
 .medium-box {
-}
-
-.work-box .image {
-}
-
-.work-box .image a {
-}
-
-.work-box .image a img {
-}
-
-h2 {
+    width:375px;
 }
 
 .work-description {
     width: 380px;
 }
 
-#infscr-loading {
-    background: none repeat scroll 0 0 #000000;
-    border-radius: 10px 10px 10px 10px;
-    bottom: 40px;
-    color: #FFFFFF;
-    left: 45%;
-    opacity: 0.8;
-    padding: 10px;
-    position: fixed;
-    text-align: center;
-    width: 200px;
-    z-index: 100;
+.works-container {
+    position: absolute;
+    min-width: 830px;
+    width: 100%;
+}
+
+#lang {
+    position: absolute;
+    right: 21px;
+    top: 21px;
+    z-index: 999;
+}
+
+#lang .current {
+    background: url("bg-location-arrow.png") no-repeat scroll 100% 11px transparent;
+    float: left;
+    padding: 6px 13px 6px 0;
+}
+
+#lang ul {
+    list-style: none;
+}
+
+#lang ul li {
+    padding: 6px 10px;
+}
+
+#lang ul li:hover {
+    background: #ffea00;
+
+    -webkit-box-shadow: inset 0px -1px 0px 0px rgba(0, 0, 0, 0.5);
+    box-shadow: inset 0px -1px 0px 0px rgba(0, 0, 0, 0.5);
+}
+
+#lang ul li a {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.89);
 }

@@ -5,8 +5,8 @@ class Language
 
   def self.collection(with_all_regions = false)
     list = [
-        Language.new(:name => 'English', :cut => 'en'),
-        Language.new(:name => 'Русский', :cut => 'ru')
+        Language.new(:name => 'En', :cut => 'en'),
+        Language.new(:name => 'Ru', :cut => 'ru')
     ]
     list = [Language.new(:name => 'All regions', :cut => '')] + list if with_all_regions
     list

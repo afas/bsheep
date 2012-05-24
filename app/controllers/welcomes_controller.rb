@@ -9,6 +9,9 @@ class WelcomesController < ApplicationController
   # GET /welcomes.json
   def index
     @works = Work.where(:lang => I18n.locale).paginate(:page => params[:page])
+
+    render :layout => "welcome"
+
     #@welcomes = Welcome.all
     #respond_to do |format|
     #  format.html # index.html.erb

@@ -1,27 +1,11 @@
 .map_container {
     width: 168px;
-    height: 168px;
+    height: 205px;
+    margin-bottom:21px;
+    /*margin: 21px 0;*/
 }
 
 .gmaps4rails_map {
-    z-index: 9999;
-
     width: 168px;
-    height: 168px;
-
-    -webkit-border-radius: 85px;
-    -moz-border-radius: 85px;
-    border-radius: 85px;
-
-    -webkit-box-shadow: rgba(64, 64, 64, 0.5) 0 2px 5px;
-    -moz-box-shadow: rgba(64, 64, 64, 0.5) 0 2px 5px;
-    box-shadow: rgba(64, 64, 64, 0.5) 0 2px 5px;
-
-    /*-webkit-box-shadow: inset 3px 3px 5px 1px rgba(64, 64, 64, 0.5);*/
-    /*-moz-box-shadow: inset 3px 3px 5px 1px rgba(64, 64, 64, 0.5);*/
-    /*box-shadow: inset 3px 3px 5px 1px rgba(64, 64, 64, 0.5);*/
-}
-
-.gmnoprint {
-    display: none !important;
+    height: 205px;
 }

@@ -3,3 +3,6 @@
 
 //= require jquery
 //= require jquery_ujs
+
+//= require jquery-markitup
+//= require markitup-set

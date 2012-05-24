@@ -2,41 +2,40 @@
   <%= link_to(yield(:title),
               controller.controller_name != "welcomes" ? "/" : "#",
               :title => @welcome.title,
-              :class => "logo")
+              :id => "logo")
   %>
-
-  <hr>
   <header>
     <h1><%= @welcome.title %></h1>
 
-    <p class="description">
+    <p>
       <%= @welcome.description %>
     </p>
   </header>
 
-  <nav class="main-menu">
+  <nav>
     <%= render "layouts/main_menu" %>
   </nav>
 
   <h2><%= t('activerecord.attributes.welcome.contacts') %></h2>
-
-  <p class="contacts">
-    <%= @welcome.phone %>
-    <br/>
-    <%= @welcome.email %>
-  </p>
-
   <address>
-    <%= @welcome.address %>
+    <p class="contacts">
+      <%= @welcome.phone %>
+      <br/>
+      <%= link_to @welcome.email, "mailto:#{@welcome.email}", :title => "Написать нам" %> <!-- TODO! title need localization -->
+    </p>
+
+    <p>
+      <%= @welcome.address %>
+    </p>
   </address>
 
   <%= render 'layouts/map' %>
 
-  <div class="twitter-follow">
+  <div class="plugin">
     <%= render "service_partial/twitter_follow" %>
   </div>
 
-  <div class="fb-like-box">
+  <div class="plugin">
     <%= render "service_partial/fb_like_box" %>
   </div>
 
