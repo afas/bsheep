@@ -6,3 +6,15 @@
     <% end %>
   </ul>
 </div>
+
+<script type="text/javascript">
+    $('#lang').click(function () {
+        $(this).toggleClass('expanded');
+    });
+
+    $(document).click(function (event) {
+        if (!$(event.target).closest('#lang').length) {
+            $('#lang').removeClass('expanded');
+        }
+    });
+</script>

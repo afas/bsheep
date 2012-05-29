@@ -1,4 +1,4 @@
-<div id="sidebar" <%= "style = 'background-color: #{TapeColor.by_id(@work.tape_color)};'" if !@work.nil? %>>
+<div id="sidebar" <%= "class = 'special'" if !@work.nil? %>>
   <%= link_to(yield(:title),
               controller.controller_name != "welcomes" ? "/" : "#",
               :title => @welcome.title,
@@ -35,7 +35,7 @@
     <%= render "service_partial/twitter_follow" %>
   </div>
 
-  <div class="plugin">
+  <div class="plugin fb-like">
     <%= render "service_partial/fb_like_box" %>
   </div>
 
