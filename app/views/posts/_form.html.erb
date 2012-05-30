@@ -34,7 +34,7 @@
     <div class="field">
       <%= f.label :description %>
       <br/>
-      <%= f.text_area :description %>
+      <%= f.text_area :description, :rows => 5, :cols => 55 %>
     </div>
     <div class="field">
       <%= f.label :full_text %>
@@ -53,7 +53,7 @@
     <div class="field">
       <%= f.label :sign_board_text %>
       <br/>
-      <%= f.text_area :sign_board_text %>
+      <%= f.text_area :sign_board_text, :rows => 21, :cols => 21 %>
     </div>
 
     <!--sign_board_image-->
@@ -62,3 +62,9 @@
       <%= f.submit %>
     </div>
 <% end %>
+
+<script language="javascript">
+    $(document).ready(function () {
+        $("#post_full_text").markItUp(mySettings);
+    })
+</script>

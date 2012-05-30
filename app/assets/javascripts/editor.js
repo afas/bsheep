@@ -4,5 +4,5 @@
 //= require jquery
 //= require jquery_ujs
 
-//= require jquery-markitup
-//= require markitup-set
+//= require jquery.markitup
+//= require jquery.markitup.set
