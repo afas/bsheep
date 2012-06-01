@@ -1,11 +1,16 @@
-<%= link_to 'New Service', new_service_path %>
+<%= link_to '+New Service', new_service_path %>
 
-<ul>
-  <% @services.each do |service| %>
-      <li>
-        <h1><%= service.title %></h1>
-        <%= link_to 'Edit', edit_service_path(service) %> | <%= link_to 'Destroy', service, confirm: 'Are you sure?', method: :delete %>
-        <%= service.description %>
-      </li>
+<div class="works-container">
+  <% @services.each_with_index do |service, i| %>
+      <div class="service">
+        <span><%= i + 1 %></span>
+        <%= link_to '+Edit', edit_service_path(service) %> <%= link_to '-Destroy', service, confirm: 'Are you sure?', method: :delete %>
+        <h2><%= service.title %></h2>
+        <p><%= service.description %></p>
+      </div>
   <% end %>
-</ul>
+</div>
+
+<script type="text/javascript">
+    Cufon.replace(".service span");
+</script>

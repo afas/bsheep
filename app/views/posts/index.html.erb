@@ -1,19 +1,58 @@
-<%= link_to 'New Post', new_post_path %>
-<% @posts.each do |post| %>
-    <h2><%= post.title %> <%= link_to 'Edit', edit_post_path(post) %> | <%= link_to 'Destroy', post, confirm: 'Are you sure?', method: :delete %></h2>
+<div class="inner-container">
+  <%= link_to '+New Post', new_post_path %>
 
-    <% if post.preview_file_name? %>
-        <%= image_tag(post.preview.url(:big)) %>
-    <% end %>
-    <div class="post-description"><%= post.description %></div>
+  <% @posts.each do |post| %>
+      <div class="post">
+        <p class="date"><%= Russian::strftime(post.created_at, "%d %B %Y г. %H:%m") %></p>
 
-    <br/>
+        <h2><%= post.title %></h2>
+        <% if post.preview_file_name? %>
+            <%#= image_tag(post.preview.url(:big)) %>
+        <% end %>
 
-    <div class="post-content"><%= post.full_text %></div>
-    <div class="sign-board">
-      <% if post.sign_board_image_file_name? %>
-          <%= image_tag(post.sign_board_image.url(:preview)) %>
-      <% end %>
-      <%= post.sign_board_text %>
-    </div>
-<% end %>
+        <div>
+          <%= link_to '+Edit', edit_post_path(post) %><%= link_to '-Destroy', post, confirm: 'Are you sure?', method: :delete %>
+        </div>
+
+        <div id="slides">
+          <div class="slides_container">
+            <img src="http://slidesjs.com/examples/standard/img/slide-1.jpg" width="540" height="360" alt="Slide 1">
+            <img src="http://slidesjs.com/examples/standard/img/slide-2.jpg" width="540" height="360" alt="Slide 2">
+            <img src="http://slidesjs.com/examples/standard/img/slide-1.jpg" width="540" height="360" alt="Slide 1">
+            <img src="http://slidesjs.com/examples/standard/img/slide-2.jpg" width="540" height="360" alt="Slide 2">
+            <img src="http://slidesjs.com/examples/standard/img/slide-1.jpg" width="540" height="360" alt="Slide 1">
+          </div>
+        </div>
+
+        <div class="post-description"><%= post.description %></div>
+        <br/>
+
+        <div class="post-content">
+
+          <div class="sign-board">
+            <% if post.sign_board_image_file_name? %>
+                <%= image_tag(post.sign_board_image.url(:preview)) %>
+            <% end %>
+            <div class="sign-board-text">
+              <%= post.sign_board_text %>
+            </div>
+          </div>
+
+          <%= post.full_text %>
+
+        </div>
+
+      </div>
+  <% end %>
+</div>
+
+<script>
+    $(function () {
+        $('#slides').slides({
+            preload:true,
+            play:5000,
+            pause:2500,
+            hoverPause:true
+        });
+    });
+</script>

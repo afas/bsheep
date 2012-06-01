@@ -35,8 +35,9 @@ img {
     top: 0;
     z-index: 1;
 }
+
 /*=================================================================================================
-	#sidebar styles
+    #sidebar styles
 =================================================================================================*/
 #sidebar {
     float: left;
@@ -131,7 +132,7 @@ img {
 =================================================================================================*/
 
 #main {
-    padding: 21px 0;
+    padding: 55px 0;
     margin: 0 0 0 250px;
     position: relative;
 }
@@ -172,15 +173,15 @@ img {
 }
 
 .work-box {
-    padding-bottom:55px;
+    padding-bottom: 55px;
 }
 
 .big-box {
-    width:790px;
+    width: 790px;
 }
 
 .medium-box {
-    width:375px;
+    width: 375px;
 }
 
 .work-description {
@@ -198,10 +199,11 @@ img {
     right: 21px;
     top: 21px;
     z-index: 999;
+    font: 12px/12px Helvetica;
 }
 
 #lang .current {
-    background: url("bg-location-arrow.png") no-repeat scroll 100% 11px transparent;
+    background: url("bg-location-arrow.png") no-repeat scroll 100% 8px transparent;
     display: block;
     left: 0;
     padding: 6px 13px 6px 0;
@@ -214,22 +216,140 @@ img {
 }
 
 #lang ul {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #e7e7e7;
+    border-radius: 5px;
     list-style: none;
     display: none;
 }
 
 #lang ul li {
-    padding: 6px 13px;
+    padding: 6px 0px 6px;
 }
 
 #lang ul li:hover {
     background: #ffea00;
+    border-bottom: 1px solid #e5d95c;
+    padding: 6px 0px 5px;
 
-    -webkit-box-shadow: inset 0px -1px 0px 0px rgba(0, 0, 0, 0.5);
-    box-shadow: inset 0px -1px 0px 0px rgba(0, 0, 0, 0.5);
+}
+
+#lang ul li.no_border:hover {
+    border: 0;
+    padding: 6px 0 6px;
 }
 
 #lang ul li a {
     text-decoration: none;
     color: rgba(0, 0, 0, 0.89);
+    padding: 0 13px;
+}
+
+.work-description h2 {
+    font: 25px/25px normal Georgia, "Times New Roman", Times, serif;
+    color: #232323;
+    margin-top: 5px;
+}
+
+.work-description p {
+    font: 12px/18px Helvetica;
+    color: #5b5b5b;
+    margin-top: 11px;
+}
+
+.service {
+    float: left;
+    width: 169px;
+    margin: 0 40px 25px 0;
+}
+
+.service span {
+    font-size: 53px;
+    color: #000000;
+    width: 100%;
+    text-align: center;
+    float: left;
+    margin-bottom: 6px;
+}
+
+.service h2 {
+    font: 16px/20px Georgia;
+    color: #232323;
+    margin: 0px 0 15px;
+}
+
+.service p {
+    font: 12px/18px Helvetica;
+    color: #232323;
+}
+
+.post .date {
+    font: 12px/18px Helvetica;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.post h2 {
+    color: #232323;
+    font: 31px/31px normal Georgia, "Times New Roman", Times, serif;
+    margin: 0 0 21px 0;
+}
+
+.post-description,
+.post-content {
+    width: 585px;
+}
+
+.post .pagination {
+    display: block;
+    height: 30px;
+    margin: -21px auto;
+    position: relative;
+    z-index: 10000;
+}
+
+.post #slides {
+    display: block;
+}
+
+.post .pagination li {
+    background: url("paginator.png") repeat scroll 0 12px transparent;
+    float: left;
+    height: 12px;
+    list-style: none outside none;
+    margin-right: 5px;
+    width: 12px;
+}
+
+.post .pagination li a {
+    color: rgba(0, 0, 0, 0);
+}
+
+.post-description {
+    color: rgba(0, 0, 0, 0.5);
+    font: 25px/28px Helvetica;
+    margin: 0;
+    padding: 21px 0 12px;
+}
+
+.post-content {
+    color: rgba(0, 0, 0, 0.7);
+    font: 15px/18px Helvetica;
+}
+
+.sign-board {
+    background: url("sign-board-bg.png") no-repeat scroll 0 0 transparent;
+    float: right;
+    margin-left: 34px;
+    min-height: 440px;
+    width: 230px;
+}
+
+.sign-board img {
+    margin: 21px auto;
+}
+
+.sign-board-text {
+    font: 12px/18px Helvetica;
+    color: rgba(0, 0, 0, 0.5);
+    padding-left: 21px;
 }

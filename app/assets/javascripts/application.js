@@ -3,3 +3,8 @@
 
 //= require jquery
 //= require jquery_ujs
+
+//= require cufon-yui
+//= require Chance_italic_400.font
+
+//= require jquery.slides
