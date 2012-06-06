@@ -5,6 +5,9 @@
               :id => "logo")
   %>
   <header>
+    <% if can?(:manage, @welcome) %>
+        <span><%= link_to "+Edit", edit_welcome_path(@welcome) %></span>
+    <% end %>
     <h1><%= @welcome.title %></h1>
 
     <p>

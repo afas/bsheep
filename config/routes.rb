@@ -3,6 +3,8 @@ Bsheep::Application.routes.draw do
   match '/access_denied' => 'error#access_denied', :as => :access_denied
   match '/not_found' => 'error#not_found', :as => :not_found
 
+  devise_for :users
+
   match '/language/:lang_cut' => 'welcomes#set_lang'
 
   scope '/:locale', :locale => /en|ru/ do
@@ -21,7 +23,6 @@ Bsheep::Application.routes.draw do
     resources :works
     resources :welcomes
 
-    devise_for :users
 
     #match '/auth/sign_in' => 'authentications#login', :as => :sign_in
     #match '/auth/sign_up' => 'authentications#registration', :as => :sign_up

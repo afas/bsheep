@@ -18,7 +18,6 @@ class User < ActiveRecord::Base
   validates_attachment_content_type :avatar, :content_type => ['image/jpeg', 'image/png'], :message => I18n.t("paperclip.bad_file_format")
 
   def admin?
-
     return false if self.role.nil?
 
     if self.role == 0

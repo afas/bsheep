@@ -1,8 +1,7 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.2'
+gem 'rails', '3.2'
 
-gem 'aloha-rails'
 gem 'cancan'
 gem 'devise'
 gem "gmaps4rails"
@@ -11,6 +10,9 @@ gem 'paperclip'
 gem 'russian'
 gem 'sqlite3'
 gem 'will_paginate'
+
+gem 'execjs'
+gem 'therubyracer'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'

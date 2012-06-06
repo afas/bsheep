@@ -4,4 +4,15 @@
         <%= link_to item.title, top_level_short_path(item.short_url) %>
       </li>
   <% end %>
+  <% if user_signed_in? %>
+      <li>
+        <%= link_to "Я", "/users/edit" %>
+      </li>
+      <li>
+        <%= link_to "Пака!", destroy_user_session_path, :method => :delete %></li>
+      <%# else %>
+      <!--<li><%#= link_to "Войти", new_user_session_path %></li>-->
+      <!--<li><%#= link_to "Зарегистрироваться", new_user_registration_path %></li>-->
+  <% end %>
+
 </ul>
