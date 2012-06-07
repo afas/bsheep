@@ -1,4 +1,0 @@
-<div class="admin-panel">
-  <%= link_to 'Edit', "edit_work_path(@work)".call if can?(:manage, Work) %>
-  <%= link_to '-Destroy', @work, confirm: 'Are you sure?', method: :delete if can?(:manage, Work) %>
-</div>

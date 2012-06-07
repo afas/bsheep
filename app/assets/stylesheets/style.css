@@ -9,6 +9,14 @@
     font-style: normal;
 }
 
+.clearfix{
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+    width: 100%;
+}
+
 html {
     height: 100%;
 }
@@ -486,4 +494,43 @@ img {
     font: 12px/18px Helvetica, tahoma, verdana, sans-serif;
     color: rgba(0, 0, 0, 0.5);
     padding-left: 21px;
+}
+
+.panel-admin {
+    background: -moz-linear-gradient(#838383, #4C4C4C) repeat scroll 0 0 transparent;
+    border-radius: 3px 3px 3px 3px;
+    box-shadow: 0 2px 7px -3px #000000 inset;
+    float: left;
+    margin: 8px 0;
+    overflow: hidden;
+    padding: 7px 5px;
+}
+
+.panel-admin ul {
+    float: left;
+    list-style-type: none;
+    overflow: hidden;
+    position: relative;
+}
+
+.panel-admin ul li {
+    border-left: 1px solid #FFFFFF;
+    float: left;
+    font-size: 0.75em;
+    margin: 0 1px 0 -1px;
+}
+
+.panel-admin ul li {
+    border-left: 1px solid #FFFFFF;
+    float: left;
+    font-size: 0.75em;
+    margin: 0 1px 0 -1px;
+}
+.panel-admin ul li a {
+    color: #FFFFFF;
+    float: left;
+    margin-top: -2px;
+    padding: 0 10px;
+    position: relative;
+    text-decoration: none;
 }

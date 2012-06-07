@@ -1,8 +1,6 @@
 <div class="inner-container">
-  <%= render "service_partial/admin_panel" if can?(:manage, Work) %>
-
   <h1><%= @work.title %></h1>
-
+  <%= controls_panel @work %>
   <div id="slides">
     <div class="slides_container">
       <% if @work.preview_file_name? %>
@@ -21,5 +19,6 @@
   <div class="post-content">
     <%= @work.full_text %>
   </div>
+
   <%= render "service_partial/social_panel", :target => @work %>
 </div>
