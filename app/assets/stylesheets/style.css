@@ -450,6 +450,18 @@ img {
     font: 15px/18px Helvetica, tahoma, verdana, sans-serif;
 }
 
+.social-panel {
+    overflow:hidden;
+    padding-top:15px;
+    }
+.social-panel .fb-like,
+.social-panel .social-vk,
+.social-panel .twitter-share-button {
+    float:left;
+    margin-right:20px;
+    display:inline;
+    }
+
 .sign-board {
     background: url("sign-board-bg.png") no-repeat scroll 0 0 transparent;
     float: right;
