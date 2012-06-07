@@ -1,9 +1,12 @@
-<p id="notice"><%= notice %></p>
+<div class="inner-container">
+  <div class="post">
+    <%= link_to '+Edit', edit_top_level_path(@top_level) if can?(:manage, TopLevel) %>
+    <h1><%= @top_level.title %></h1>
 
-<h1><%= @top_level.title %></h1>
+    <%= image_tag @top_level.image.url(:good), :alt => @top_level.title %>
 
-<p>
-  <%= raw @top_level.description %>
-</p>
-
-<%= link_to 'Edit', edit_top_level_path(@top_level) if can?(:manage, TopLevel) %>
+    <div class="post-content">
+      <%= raw @top_level.description %>
+    </div>
+  </div>
+</div>
