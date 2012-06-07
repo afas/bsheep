@@ -27,6 +27,11 @@
       <%= f.file_field :preview %>
     </div>
     <div class="field">
+      <%= f.label :view_id %>
+      <br/>
+      <%= f.collection_select(:view_id, ViewType.collection, :cut, :name, :prompt => false) %>
+    </div>
+    <div class="field">
       <%= f.label :title %>
       <br/>
       <%= f.text_field :title %>
