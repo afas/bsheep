@@ -2,11 +2,14 @@
 <html lang="<%= I18n.locale %>">
 <head>
   <title><%= yield(:title) %></title>
+
   <meta charset="utf-8"/>
   <meta name="description" content="<%= yield(:description) %>">
   <meta name="keywords" content="<%= yield(:keywords) %>">
+
   <%= stylesheet_link_tag "application" %>
   <%= javascript_include_tag "welcome" %>
+
   <!--[if lt IE 9]>
   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
