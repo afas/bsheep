@@ -45,7 +45,8 @@
       });
 
       function iFrameSetDimentions() {
-          iFrameWidth = $(window).width();
+          iFrameWidth = <%= @work.width %>;
+//          iFrameWidth = $(window).width();
           iFrameHeight = 2000;
 
           $("#remote-site").css("width", iFrameWidth);

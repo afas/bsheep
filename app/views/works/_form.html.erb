@@ -57,6 +57,11 @@
       <%= f.text_field :web_url %>
     </div>
     <div class="field">
+      <%= f.label :width %>
+      <br/>
+      <%= f.text_field :width %>
+    </div>
+    <div class="field">
       <%= f.label :tape_color %>
       <br/>
       <%= f.collection_select(:tape_color, TapeColor.collection, :cut, :name, :prompt => true) %>
