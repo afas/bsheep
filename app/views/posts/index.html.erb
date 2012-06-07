@@ -6,9 +6,6 @@
         <p class="date"><%= Russian::strftime(post.created_at, "%d %B %Y г. %H:%m") %></p>
 
         <h2><%= post.title %></h2>
-        <% if post.preview_file_name? %>
-            <%#= image_tag(post.preview.url(:big)) %>
-        <% end %>
 
         <div class="admin">
           <%= link_to '+Edit', edit_post_path(post) if can?(:manage, post) %><%= link_to '-Destroy', post, confirm: 'Are you sure?', method: :delete if can?(:manage, post) %>
@@ -16,11 +13,14 @@
 
         <div id="slides">
           <div class="slides_container">
-            <img src="http://slidesjs.com/examples/standard/img/slide-1.jpg" width="540" height="360" alt="Slide 1">
-            <img src="http://slidesjs.com/examples/standard/img/slide-2.jpg" width="540" height="360" alt="Slide 2">
-            <img src="http://slidesjs.com/examples/standard/img/slide-1.jpg" width="540" height="360" alt="Slide 1">
-            <img src="http://slidesjs.com/examples/standard/img/slide-2.jpg" width="540" height="360" alt="Slide 2">
-            <img src="http://slidesjs.com/examples/standard/img/slide-1.jpg" width="540" height="360" alt="Slide 1">
+            <% if post.preview_file_name? %>
+                <%= image_tag(post.preview.url(:big)) %>
+            <% end %>
+            <!--<img src="http://slidesjs.com/examples/standard/img/slide-1.jpg" width="540" height="360" alt="Slide 1">-->
+            <!--<img src="http://slidesjs.com/examples/standard/img/slide-2.jpg" width="540" height="360" alt="Slide 2">-->
+            <!--<img src="http://slidesjs.com/examples/standard/img/slide-1.jpg" width="540" height="360" alt="Slide 1">-->
+            <!--<img src="http://slidesjs.com/examples/standard/img/slide-2.jpg" width="540" height="360" alt="Slide 2">-->
+            <!--<img src="http://slidesjs.com/examples/standard/img/slide-1.jpg" width="540" height="360" alt="Slide 1">-->
           </div>
         </div>
 
