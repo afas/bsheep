@@ -6,4 +6,4 @@
   <%= @top_level.description %>
 </p>
 
-<%= link_to 'Edit', edit_top_level_path(@top_level) %> | <%= link_to 'Back', top_levels_path %>
+<%= link_to 'Edit', edit_top_level_path(@top_level) if can?(:manage, TopLevel) %>

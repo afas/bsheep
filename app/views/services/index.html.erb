@@ -1,4 +1,4 @@
-<%= link_to '+New Service', new_service_path %>
+<%= link_to '+New Service', new_service_path if can?(:manage, Service)  %>
 
 <div class="works-container">
   <% @services.each_with_index do |service, i| %>
