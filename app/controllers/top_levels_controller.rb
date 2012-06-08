@@ -32,7 +32,7 @@ class TopLevelsController < ApplicationController
     @top_level = TopLevel.new
 
     respond_to do |format|
-      format.html # new.html.erb
+      format.html { render layout: "editor" }
       format.json { render json: @top_level }
     end
   end
@@ -40,6 +40,7 @@ class TopLevelsController < ApplicationController
   # GET /top_levels/1/edit
   def edit
     @top_level = TopLevel.find(params[:id])
+    render layout: "editor"
   end
 
   # POST /top_levels
@@ -52,7 +53,7 @@ class TopLevelsController < ApplicationController
         format.html { redirect_to @top_level, notice: 'Top level was successfully created.' }
         format.json { render json: @top_level, status: :created, location: @top_level }
       else
-        format.html { render action: "new" }
+        format.html { render action: "new", layout: "editor" }
         format.json { render json: @top_level.errors, status: :unprocessable_entity }
       end
     end
@@ -68,7 +69,7 @@ class TopLevelsController < ApplicationController
         format.html { redirect_to @top_level, notice: 'Top level was successfully updated.' }
         format.json { head :no_content }
       else
-        format.html { render action: "edit" }
+        format.html { render action: "edit", layout: "editor" }
         format.json { render json: @top_level.errors, status: :unprocessable_entity }
       end
     end
