@@ -1,7 +1,8 @@
 <div class="inner-container">
   <div class="post">
-    <%= link_to '+Edit', edit_top_level_path(@top_level) if can?(:manage, TopLevel) %>
     <h1><%= @top_level.title %></h1>
+
+    <%= controls_panel(@top_level) %>
 
     <%= image_tag @top_level.image.url(:good), :alt => @top_level.title %>
 

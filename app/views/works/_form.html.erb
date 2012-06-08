@@ -39,7 +39,7 @@
     <div class="field">
       <%= f.label :description %>
       <br/>
-      <%= f.text_area :description %>
+      <%= f.text_area :description, :rows => 5, :cols => 55 %>
     </div>
     <div class="field">
       <%= f.label :full_text %>
@@ -64,9 +64,16 @@
     <div class="field">
       <%= f.label :tape_color %>
       <br/>
-      <%= f.collection_select(:tape_color, TapeColor.collection, :cut, :name, :prompt => true) %>
+      <%= f.collection_select(:tape_color, TapeStyle.collection, :cut, :name, :prompt => true) %>
     </div>
     <div class="actions">
       <%= f.submit %>
     </div>
 <% end %>
+
+
+<script language="javascript">
+    $(document).ready(function () {
+        $("#work_full_text").markItUp(mySettings);
+    })
+</script>

@@ -15,7 +15,7 @@ module ApplicationHelper
   end
 
   def controls_panel(object)
-    edit_path = send("edit_#{object.class.to_s.downcase}_path", object)
+    edit_path = send("edit_#{object.class.name.underscore}_path", object)
 
     begin
       confirm_text = "Do you realy want delete \"#{object.title}\"?"

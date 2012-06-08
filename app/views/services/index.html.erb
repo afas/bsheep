@@ -4,9 +4,10 @@
   <% @services.each_with_index do |service, i| %>
       <div class="service">
         <span><%= i + 1 %></span>
-        <%= link_to '+Edit', edit_service_path(service) if can?(:manage, Service) %> <%= link_to '-Destroy', service, confirm: 'Are you sure?', method: :delete if can?(:manage, Service) %>
+        <%= controls_panel(service) %>
         <h2><%= service.title %></h2>
         <p><%= service.description %></p>
+        <%= link_to t("activerecord.attributes.service.presentation_download"), service.presentation.url(), :target => "_blank" if service.presentation_file_name? %>
       </div>
   <% end %>
 </div>

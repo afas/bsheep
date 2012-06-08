@@ -1,4 +1,4 @@
-<div id="sidebar" <%= "class = 'special'" if !@work.nil? %>>
+<div id="sidebar" <%= "class = '#{TapeStyle.by_id(@work.tape_color)}'" unless @work.nil? %>>
   <%= link_to(yield(:title),
               controller.controller_name != "welcomes" ? "/" : "#",
               :title => @welcome.title,

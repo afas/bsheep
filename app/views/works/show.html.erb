@@ -1,24 +1,30 @@
-<div class="inner-container">
-  <h1><%= @work.title %></h1>
-  <%= controls_panel @work %>
-  <div id="slides">
-    <div class="slides_container">
-      <% if @work.preview_file_name? %>
-          <%= image_tag(@work.preview.url(:big)) %>
-      <% end %>
-      <!--<img src="http://slidesjs.com/examples/standard/img/slide-1.jpg" width="540" height="360" alt="Slide 1">-->
-      <!--<img src="http://slidesjs.com/examples/standard/img/slide-2.jpg" width="540" height="360" alt="Slide 2">-->
-      <!--<img src="http://slidesjs.com/examples/standard/img/slide-1.jpg" width="540" height="360" alt="Slide 1">-->
-      <!--<img src="http://slidesjs.com/examples/standard/img/slide-2.jpg" width="540" height="360" alt="Slide 2">-->
-      <!--<img src="http://slidesjs.com/examples/standard/img/slide-1.jpg" width="540" height="360" alt="Slide 1">-->
+<% if @work.with_web_page? %>
+    <%= controls_panel @work %>
+<% else %>
+    <div class="inner-container">
+      <h1><%= @work.title %></h1>
+      <%= controls_panel @work %>
+      <div id="slides">
+        <div class="slides_container">
+          <% if @work.preview_file_name? %>
+              <%= image_tag(@work.preview.url(:big)) %>
+          <% end %>
+          <!--<img src="http://slidesjs.com/examples/standard/img/slide-1.jpg" width="540" height="360" alt="Slide 1">-->
+          <!--<img src="http://slidesjs.com/examples/standard/img/slide-2.jpg" width="540" height="360" alt="Slide 2">-->
+          <!--<img src="http://slidesjs.com/examples/standard/img/slide-1.jpg" width="540" height="360" alt="Slide 1">-->
+          <!--<img src="http://slidesjs.com/examples/standard/img/slide-2.jpg" width="540" height="360" alt="Slide 2">-->
+          <!--<img src="http://slidesjs.com/examples/standard/img/slide-1.jpg" width="540" height="360" alt="Slide 1">-->
+        </div>
+      </div>
+      <div class="post-description"><%= @work.description %></div>
+      <br/>
+
+      <div class="post-content">
+        <%= @work.full_text %>
+      </div>
+
+      <%= render "service_partial/social_panel", :target => @work %>
     </div>
-  </div>
-  <div class="post-description"><%= @work.description %></div>
-  <br/>
+<% end %>
 
-  <div class="post-content">
-    <%= @work.full_text %>
-  </div>
 
-  <%= render "service_partial/social_panel", :target => @work %>
-</div>

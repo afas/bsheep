@@ -41,7 +41,7 @@ class WorksController < ApplicationController
     @edit_action = true
 
     respond_to do |format|
-      format.html # new.html.erb
+      format.html { render layout: "editor" }
       format.json { render json: @work }
     end
   end
@@ -50,6 +50,7 @@ class WorksController < ApplicationController
   def edit
     @edit_action = true
     @work = Work.find(params[:id])
+    render layout: "editor"
   end
 
   # POST /works
@@ -63,7 +64,7 @@ class WorksController < ApplicationController
         format.html { redirect_to @work, notice: 'Work was successfully created.' }
         format.json { render json: @work, status: :created, location: @work }
       else
-        format.html { render action: "new" }
+        format.html { render action: "new", layout: "editor"  }
         format.json { render json: @work.errors, status: :unprocessable_entity }
       end
     end
@@ -79,7 +80,7 @@ class WorksController < ApplicationController
         format.html { redirect_to @work, notice: 'Work was successfully updated.' }
         format.json { head :no_content }
       else
-        format.html { render action: "edit" }
+        format.html { render action: "edit", layout: "editor"  }
         format.json { render json: @work.errors, status: :unprocessable_entity }
       end
     end

@@ -1,12 +1,13 @@
 <% @works.each_with_index do |work, i| %>
-    <div class="work-box <%= i%3 == 0 || i == 0 ? "big-box" : "medium-box" %>">
-      <!--:medium => '740x390>',-->
-      <!--:big => '380x450>'-->
-      <%= link_to image_tag(work.preview.url(i%5 == 0 || i == 0 ? :big : :medium), :alt => work.title), work_short_path(work.short_url) %>
+    <div class="work-box <%= i%3 == 0 || i == 0 ? "big-box" : "medium-box" %> <%= ViewType.by_id(work.view_id) %>">
+      <div class="work-wrapper">
+        <%= link_to image_tag(work.preview.url(i%5 == 0 || i == 0 ? :big : :medium), :alt => work.title), work_short_path(work.short_url) %>
+      </div>
       <div class="work-description">
         <h2><%= work.title %></h2>
-
-        <p><%= work.description %></p>
+        <p>
+          <%= work.description %>
+        </p>
       </div>
     </div>
 <% end %>

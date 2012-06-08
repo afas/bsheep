@@ -9,17 +9,11 @@ class Service < ActiveRecord::Base
 
   default_scope order("item_order, id DESC")
 
-  has_attached_file :preview,
-                    :styles => {
-                        :social_preview => '121x121#',
-                        :medium => '333x400>',
-                        :big => '800x700>'
-                    },
-                    :default_url => '/service/default.png',
-                    :url => '/service/:id/:style_:basename.:extension'
+  has_attached_file :presentation,
+                    :url => '/service_presentations/:id/:style_:basename.:extension'
 
   #validates_attachment_presence :preview
-  validates_attachment_content_type :preview, :content_type => ['image/jpeg', 'image/png'], :message => I18n.t("paperclip.bad_file_format")
+  #validates_attachment_content_type :preview, :content_type => ['image/jpeg', 'image/png'], :message => I18n.t("paperclip.bad_file_format")
 
   private
 

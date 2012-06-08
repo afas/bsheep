@@ -9,14 +9,6 @@
     font-style: normal;
 }
 
-.clearfix{
-    clear: both;
-    display: block;
-    height: 0;
-    visibility: hidden;
-    width: 100%;
-}
-
 html {
     height: 100%;
 }
