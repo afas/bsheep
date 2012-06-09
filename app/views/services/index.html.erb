@@ -6,7 +6,7 @@
         <span><%= i + 1 %></span>
         <%= controls_panel(service) %>
         <h2><%= service.title %></h2>
-        <p><%= service.description %></p>
+        <p><%= raw service.description %></p>
         <%= link_to t("activerecord.attributes.service.presentation_download"), service.presentation.url(), :target => "_blank" if service.presentation_file_name? %>
       </div>
   <% end %>

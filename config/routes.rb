@@ -15,13 +15,13 @@ Bsheep::Application.routes.draw do
 
     resources :services
 
-    match '/:short_url' => 'top_levels#show', :as => :top_level_short
-    resources :top_levels
-
     match '/work/page/:page' => 'works#page', :as => :work_page
     match '/work/:short_url' => 'works#show', :as => :work_short
     resources :works
     resources :welcomes
+
+    match '/:short_url' => 'top_levels#show', :as => :top_level_short
+    resources :top_levels
 
 
     #match '/auth/sign_in' => 'authentications#login', :as => :sign_in
