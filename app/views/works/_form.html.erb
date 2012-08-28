@@ -32,6 +32,11 @@
       <%= f.collection_select(:view_id, ViewType.collection, :cut, :name, :prompt => false) %>
     </div>
     <div class="field">
+      <%= f.label :item_order %>
+      <br/>
+      <%= f.number_field :item_order %>
+    </div>
+    <div class="field">
       <%= f.label :title %>
       <br/>
       <%= f.text_field :title %>
@@ -46,6 +51,12 @@
       <br/>
       <%= f.text_area :full_text %>
     </div>
+    <div class="field">
+      <%= f.label :published %>
+      <br/>
+      <%= f.check_box :published %>
+    </div>
+
     <div class="field">
       <%= f.label :with_web_page %>
       <br/>

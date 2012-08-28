@@ -4,7 +4,7 @@
 
     <%= controls_panel(@top_level) %>
 
-    <%= image_tag @top_level.image.url(:good), :alt => @top_level.title %>
+    <%= image_tag @top_level.image.url(:good), :alt => @top_level.title unless @top_level.image_file_name.nil? %>
 
     <div class="post-content">
       <%= raw @top_level.description %>

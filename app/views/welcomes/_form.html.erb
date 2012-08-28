@@ -11,10 +11,11 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :lang %><br />
-    <%= f.text_field :lang %>
-  </div>
+    <div class="field">
+      <%= f.label :lang %>
+      <br/>
+      <%= f.collection_select(:lang, Language.collection, :cut, :name, :prompt => false) %>
+    </div>
   <div class="field">
     <%= f.label :title %><br />
     <%= f.text_field :title %>

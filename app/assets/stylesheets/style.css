@@ -31,6 +31,10 @@ img {
     z-index: 1;
 }
 
+.clear {
+    clear: both;
+}
+
 /*=================================================================================================
     #sidebar styles
 =================================================================================================*/
@@ -525,4 +529,48 @@ img {
     padding: 0 10px;
     position: relative;
     text-decoration: none;
+}
+
+/*.field {*/
+    /*padding: 8px 0;*/
+/*}*/
+
+/*.field label {*/
+    /*margin-bottom: 8px;*/
+/*}*/
+
+.field input[type="text"], .field input[type="number"], .field textarea {
+    border: 1px solid #D5D5D5;
+    /*font-size: 21px;*/
+    height: 28px;
+    /*line-height: 28px;*/
+    margin: 5px 0 13px 0;
+    padding: 5px;
+    width: 675px;
+    box-sizing: border-box;
+}
+
+.field select {
+    margin: 5px 0 13px 0;
+    min-width: 121px;
+}
+
+.field textarea {
+    height: auto;
+}
+
+.devise form input[type="submit"], .actions input[type="submit"] {
+    background-color: #ffea00;
+    display: block;
+    height: 34px;
+    border: 1px solid #D5D5D5;
+    color: #000000;
+}
+
+#infscr-loading {
+    z-index: 21000;
+    position: fixed;
+    bottom: 55px;
+    left: 48%;
+    background-color: #FFF;
 }

@@ -22,7 +22,18 @@ class ApplicationController < ActionController::Base
   private
 
   def default_data
-    @top_level_list = TopLevel.where(:lang => I18n.locale)
+
+    unless current_user.nil?
+       if current_user.admin?
+         @top_level_list = TopLevel.where(:lang => I18n.locale)
+       else
+         @top_level_list = TopLevel.where(:lang => I18n.locale, :published => true)
+       end
+    else
+      @top_level_list = TopLevel.where(:lang => I18n.locale, :published => true)
+    end
+
+
     @welcome = Welcome.where(:lang => I18n.locale).first
     @map = Welcome.where(:lang => I18n.locale).first.to_gmaps4rails
   end

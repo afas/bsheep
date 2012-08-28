@@ -26,7 +26,7 @@ module ApplicationHelper
     links = nil
     links  = "<li>" + link_to('Edit', edit_path) + "</li>" if can?(:update, object)
     links += "<li>" + link_to('Delete', object, :confirm => confirm_text, :method => :delete)  + "</li>" if can?(:destroy, object)
-    links = '<div class="panel-admin"><ul>' + links + '</ul></div><div class="clearfix"></div>' if can?(:manage, object)
+    links = '<div class="panel-admin"><ul>' + links + '</ul></div><br/><br/><br/>' if can?(:manage, object)
 
     raw links
   end

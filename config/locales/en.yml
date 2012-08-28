@@ -36,6 +36,8 @@ en:
         email: "email"
         address: "Address"
         contacts: "Contacts"
+        loading_more: "Loading more"
+        is_all: "No more ..."
       service:
         lang: "Language"
         title: "Title"
@@ -62,3 +64,5 @@ en:
         web_url: "Web site URL"
         width: "min width of IFrame container"
         tape_color: "Style of brand tape"
+        published: "Published"
+        item_order: "Item order"

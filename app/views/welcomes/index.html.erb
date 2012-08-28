@@ -42,8 +42,10 @@
                     nextSelector:'#page-nav a',
                     itemSelector:'.work-box',
                     loading:{
-                        finishedMsg:'No more pages to load.',
-                        img:'http://i.imgur.com/6RMhx.gif'
+                        img:'/assets/preloader.gif',
+//                        msgText: '<%#= t("activerecord.attributes.welcome.loading_more") %>'
+//                        msgText: '<%#= t("activerecord.attributes.welcome.loading_more") %>'
+                        finishedMsg:'<%= t("activerecord.attributes.welcome.is_all") %>'
                     }
                 },
                 function (newElements) {
@@ -56,15 +58,3 @@
         );
     });
 </script>
-
-
-
-
-
-
-
-
-
-
-
-
