@@ -1,7 +1,7 @@
 class WorksController < ApplicationController
 
   def page
-    @works = Work.where(:lang => I18n.locale).paginate(:page => params[:page])
+    @works = Work.where("lang = ? AND published = ?", I18n.locale, true).paginate(:page => params[:page])
 
     render :layout => false
 

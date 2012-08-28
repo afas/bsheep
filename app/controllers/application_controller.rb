@@ -27,10 +27,10 @@ class ApplicationController < ActionController::Base
        if current_user.admin?
          @top_level_list = TopLevel.where(:lang => I18n.locale)
        else
-         @top_level_list = TopLevel.where(:lang => I18n.locale, :published => true)
+         @top_level_list = TopLevel.where("lang = ? AND published = ?", I18n.locale, true)
        end
     else
-      @top_level_list = TopLevel.where(:lang => I18n.locale, :published => true)
+      @top_level_list = TopLevel.where("lang = ? AND published = ?", I18n.locale, true)
     end
 
 

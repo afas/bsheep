@@ -31,7 +31,7 @@ class WelcomesController < ApplicationController
     #@welcome = Welcome.find(params[:id])
     respond_to do |format|
       if @welcome.update_attributes(params[:welcome])
-        format.html { redirect_to root, notice: 'Welcome was successfully updated.' }
+        format.html { redirect_to root_url, notice: 'Welcome was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
