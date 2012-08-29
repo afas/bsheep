@@ -464,7 +464,7 @@ img {
 
 .social-panel {
     overflow:hidden;
-    padding-top:15px;
+    padding:15px 0 21px 0;
     }
 .social-panel .fb-like,
 .social-panel .social-vk,
