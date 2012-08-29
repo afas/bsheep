@@ -9,13 +9,8 @@
         <div id="slides">
           <div class="slides_container">
             <% if post.preview_file_name? %>
-                <%= image_tag(post.preview.url(:big)) %>
+                <%= image_tag(post.preview.url(:big), :alt => @post.title) %>
             <% end %>
-            <!--<img src="http://slidesjs.com/examples/standard/img/slide-1.jpg" width="540" height="360" alt="Slide 1">-->
-            <!--<img src="http://slidesjs.com/examples/standard/img/slide-2.jpg" width="540" height="360" alt="Slide 2">-->
-            <!--<img src="http://slidesjs.com/examples/standard/img/slide-1.jpg" width="540" height="360" alt="Slide 1">-->
-            <!--<img src="http://slidesjs.com/examples/standard/img/slide-2.jpg" width="540" height="360" alt="Slide 2">-->
-            <!--<img src="http://slidesjs.com/examples/standard/img/slide-1.jpg" width="540" height="360" alt="Slide 1">-->
           </div>
         </div>
 
