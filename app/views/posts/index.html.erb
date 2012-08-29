@@ -14,7 +14,7 @@
           </div>
         </div>
 
-        <div class="post-description"><%= post.description %></div>
+        <div class="post-description"><%= raw post.description %></div>
         <br/>
 
         <div class="post-content">
@@ -24,11 +24,11 @@
                 <%= image_tag(post.sign_board_image.url(:preview)) %>
             <% end %>
             <div class="sign-board-text">
-              <%= post.sign_board_text %>
+              <%= raw post.sign_board_text %>
             </div>
           </div>
 
-          <%= post.full_text %>
+          <%= raw post.full_text %>
 
         </div>
 
