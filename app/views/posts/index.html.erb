@@ -9,7 +9,7 @@
         <div id="slides">
           <div class="slides_container">
             <% if post.preview_file_name? %>
-                <%= image_tag(post.preview.url(:big), :alt => @post.title) %>
+                <%= image_tag(post.preview.url(:big), :alt => post.title) %>
             <% end %>
           </div>
         </div>
