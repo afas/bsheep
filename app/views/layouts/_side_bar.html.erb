@@ -1,9 +1,6 @@
 <div id="sidebar" <%= "class = '#{TapeStyle.by_id(@work.tape_color)}'" unless @work.nil? %>>
-  <%= link_to(yield(:title),
-              controller.controller_name != "welcomes" ? "/" : "#",
-              :title => @welcome.title,
-              :id => "logo")
-  %>
+  <%#= link_to(yield(:title), controller.controller_name != "welcomes" ? "/" : "#", :title => @welcome.title, :id => "logo") %>
+  <%= link_to(yield(:title), root_path, :title => @welcome.title, :id => "logo") %>
   <header>
     <% if can?(:manage, @welcome) %>
         <span><%= link_to "+Edit", edit_welcome_path(@welcome) %></span>
