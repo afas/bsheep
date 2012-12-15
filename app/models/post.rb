@@ -25,7 +25,7 @@ class Post < ActiveRecord::Base
 
   has_attached_file :sign_board_image,
                     :styles => {
-                        :preview => '130x130<'
+                        :preview => '160x160>'
                     },
                     :default_url => '/work/default.png',
                     :url => '/post/:id/:style_:basename.:extension'
